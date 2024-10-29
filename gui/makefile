@@ -4,7 +4,7 @@ QT_LIBS = `pkg-config --libs Qt6Core Qt6Gui Qt6Widgets`
 
 # Compiler settings
 CXX = g++
-CXXFLAGS = -Wall -std=gnu++20 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+CXXFLAGS = -Wall -std=gnu++20 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -fPIC
 
 all:
 	$(CXX) $(CXXFLAGS) $(QT_INCLUDES) -o bin/polonius-gui src/main.cpp $(QT_LIBS)
